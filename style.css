@@ -1,0 +1,456 @@
+/* =========================================================
+   COLORS + FONTS
+   The whole palette lives here. Change a hex code and it updates everywhere.
+   ========================================================= */
+:root {
+  --wine: #5c1518;        /* deep wine red */
+  --red: #a3262a;         /* brighter red for small accents */
+  --cream: #ece3d3;       /* warm cream */
+  --black: #0e0a09;       /* warm black */
+
+  --display: "Instrument Serif", Georgia, serif;   /* name + headings */
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans: "Inter", system-ui, sans-serif;
+  --mono: "Space Mono", ui-monospace, monospace;
+
+  --pad: clamp(20px, 4vw, 56px);
+}
+
+/* =========================================================
+   SECTION THEMES
+   Each section gets one solid color. Add theme-wine, theme-cream,
+   or theme-black to any section in index.html to switch it.
+   ========================================================= */
+.theme-wine {
+  --bg: var(--wine);
+  --bg-raised: #4a1013;
+  --text: var(--cream);
+  --muted: #d6b9ad;
+  --line: #7a2a2d;
+  --accent: var(--cream);
+}
+.theme-cream {
+  --bg: var(--cream);
+  --bg-raised: #f5efe4;
+  --text: #1c1210;
+  --muted: #6e5d55;
+  --line: #d4c7b3;
+  --accent: var(--wine);
+}
+.theme-black {
+  --bg: var(--black);
+  --bg-raised: #1a1312;
+  --text: var(--cream);
+  --muted: #9c8e85;
+  --line: #2e2321;
+  --accent: var(--red);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* every themed block paints its own solid background */
+.theme-wine, .theme-cream, .theme-black {
+  background: var(--bg);
+  color: var(--text);
+}
+
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Your pahtagul drawing, laid over the wine red */
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  background: url("assets/pattern.jpg") center / cover no-repeat;
+  mix-blend-mode: multiply;    /* black ink darkens the red, white paper disappears */
+  opacity: 0.4;
+}
+
+.nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px var(--pad);
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 28px;
+  letter-spacing: 0;
+}
+
+.clocks { display: flex; gap: 14px; color: var(--muted); }
+.clock-dot { color: var(--accent); }
+
+.nav-links { display: flex; gap: 28px; }
+.nav-links a { transition: opacity 0.2s; }
+.nav-links a:hover { opacity: 0.6; }
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  margin-top: auto;
+  padding: 0 var(--pad) 12vh;
+}
+
+.hero-kicker {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.2em;
+  margin-bottom: 20px;
+}
+
+.hero-name {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(64px, 12vw, 190px);
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  color: var(--cream);
+}
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: clamp(22px, 2.6vw, 34px);
+  margin-top: 28px;
+  max-width: 720px;
+}
+
+.hero-roles {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 15px;
+}
+.hero-roles a { color: var(--text); border-bottom: 1px solid var(--muted); }
+.hero-roles span { margin: 0 10px; }
+
+.scroll-cue {
+  position: absolute;
+  z-index: 2;
+  right: var(--pad);
+  bottom: 32px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* =========================================================
+   SECTIONS (shared)
+   ========================================================= */
+.section { padding: 120px var(--pad); }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 56px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--text);
+}
+.section-head h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 64px);
+}
+.section-head p { color: var(--muted); }
+.hint { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-left: 12px; }
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+.project-list { display: flex; flex-direction: column; gap: 32px; }
+
+.project {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  padding: 24px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.project:hover { border-color: var(--accent); transform: translateY(-4px); }
+
+.project-thumb {
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  background: var(--line);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  overflow: hidden;
+}
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.project-info { display: flex; flex-direction: column; justify-content: center; }
+.project-num { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+
+/* Featured project: solid wine card, like a color block in your reference */
+.project.featured {
+  --bg-raised: var(--wine);
+  --text: var(--cream);
+  --muted: #d6b9ad;
+  --line: #7a2a2d;
+  --accent: var(--cream);
+  color: var(--text);
+  border-color: var(--wine);
+}
+.badge {
+  align-self: flex-start;
+  margin-top: 10px;
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  color: var(--wine);
+  background: var(--cream);
+}
+.project-info h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(32px, 3.5vw, 48px);
+  line-height: 1.1;
+  margin: 6px 0 4px;
+}
+.project-meta { color: var(--muted); font-size: 14px; }
+.project-desc { margin: 16px 0; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.tags li {
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 12px;
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.view-more { font-family: var(--mono); font-size: 13px; color: var(--accent); }
+
+/* =========================================================
+   PUBLICATION (clickable paper cover)
+   ========================================================= */
+.publication {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: -8px 0 8px;
+  padding: 24px 24px 24px 48px;
+  border-left: 2px solid var(--wine);
+}
+
+.paper-cover {
+  position: relative;
+  display: block;
+  aspect-ratio: 210 / 297;          /* A4 page shape */
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(28, 18, 16, 0.25);
+  transform: rotate(-2deg);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.paper-cover:hover {
+  transform: rotate(0deg) translateY(-6px);
+  box-shadow: 0 16px 40px rgba(92, 21, 24, 0.35);
+}
+.paper-cover img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+.paper-hover {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 10px;
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--cream);
+  background: var(--wine);
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+.paper-cover:hover .paper-hover { transform: translateY(0); }
+
+.publication-info h3 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
+  margin: 6px 0 4px;
+}
+
+/* =========================================================
+   PLAY STRIP (horizontal scroll)
+   ========================================================= */
+.play-strip {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.play-strip.dragging { cursor: grabbing; }
+
+.play-item { flex: 0 0 auto; width: 280px; }
+.play-img,
+.play-item img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--bg-raised);
+  pointer-events: none;
+}
+.play-item figcaption {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+.about {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-photo {
+  aspect-ratio: 4 / 5;
+  border-radius: 160px 160px 16px 16px;   /* arch shape */
+  background: var(--bg-raised);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12px;
+  overflow: hidden;
+}
+.about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+
+.about-text h2 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(40px, 5vw, 64px);
+  margin-bottom: 20px;
+}
+.about-text p { max-width: 620px; margin-bottom: 16px; font-size: 17px; }
+.looking { font-family: var(--mono); font-size: 14px; color: var(--cream); }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer { padding: 120px var(--pad) 40px; }
+
+.footer-big {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(56px, 10vw, 150px);
+  line-height: 1;
+  color: var(--cream);
+}
+
+.footer-links { display: flex; flex-wrap: wrap; gap: 32px; margin: 40px 0 100px; font-size: 18px; }
+.footer-links a { border-bottom: 1px solid var(--line); transition: border-color 0.2s, color 0.2s; }
+.footer-links a:hover { color: var(--accent); border-color: var(--accent); }
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* =========================================================
+   PHONE LAYOUT
+   ========================================================= */
+@media (max-width: 760px) {
+  .clocks { display: none; }
+  .nav-links { gap: 16px; }
+  .project { grid-template-columns: 1fr; gap: 20px; }
+  .publication { grid-template-columns: 1fr; padding-left: 24px; }
+  .paper-cover { max-width: 200px; }
+  .about { grid-template-columns: 1fr; gap: 32px; }
+  .about-photo { max-width: 260px; }
+  .section { padding: 80px var(--pad); }
+  .section-head { flex-direction: column; gap: 8px; }
+  .scroll-cue { display: none; }
+}
+
+/* =========================================================
+   TYPE: big serif headings + italic accents (like your reference)
+   Wrap any word in <em> inside these headings to make it italic serif.
+   ========================================================= */
+.hero-name,
+.hero-tagline,
+.section-head h2,
+.project-info h3,
+.publication-info h3,
+.about-text h2,
+.footer-big {
+  font-family: var(--display);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.hero-name { font-size: clamp(72px, 13.5vw, 210px); line-height: 0.86; letter-spacing: -0.01em; }
+.hero-tagline { font-size: clamp(24px, 2.8vw, 38px); line-height: 1.15; max-width: 960px; }
+.section-head h2 { font-size: clamp(44px, 6vw, 84px); line-height: 1; }
+.project-info h3 { font-size: clamp(34px, 3.6vw, 52px); line-height: 1; }
+.publication-info h3 { font-size: clamp(28px, 2.8vw, 40px); line-height: 1.05; }
+.about-text h2 { font-size: clamp(48px, 6vw, 84px); line-height: 1; }
+.footer-big { font-size: clamp(72px, 13vw, 200px); line-height: 0.9; }
+
+/* the italic accent words */
+.hero-tagline em,
+.section-head h2 em,
+.about-text h2 em,
+.footer-big em {
+  font-family: var(--serif);
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+/* avoid single words on the last line */
+p, li, blockquote, figcaption { text-wrap: pretty; }
+h1, h2, h3, h4 { text-wrap: balance; }

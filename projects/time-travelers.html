@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Time Travelers · Robiya Sahibnazarova</title>
+  <meta name="description" content="Time Travelers: an intergenerational storytelling app and installation for Boston's Seaport. Presented at DRS 2026 in Edinburgh." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <!-- ../ means "go up one folder", since this page lives inside /projects -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body>
+
+  <!-- ============ TOP ============ -->
+  <header class="cs-hero theme-wine">
+    <nav class="nav">
+      <a href="../index.html" class="logo">robiya</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#work">← all work</a></li>
+        <li><a href="../index.html#about">about</a></li>
+        <li><a href="../assets/resume.pdf" target="_blank">resume</a></li>
+      </ul>
+    </nav>
+
+    <div class="cs-hero-content">
+      <span class="badge">✦ Presented at DRS 2026 · Edinburgh</span>
+      <h1 class="cs-title">Time <em>Travelers</em></h1>
+      <p class="cs-subtitle">
+        A mobile app and boardwalk installation that turns Boston's Seaport into a living archive,
+        where older adults share memories of the neighborhood and younger residents help keep them alive.
+      </p>
+    </div>
+
+    <div class="cs-cover"><img src="../assets/time-travelers/cover1.jpeg" alt="Render of the Time Travelers installation on the Seaport boardwalk, with vintage TVs from different decades" /></div>
+  </header>
+
+  <main class="theme-cream">
+
+    <!-- ============ QUICK FACTS ============ -->
+    <section class="cs-facts">
+      <div><span class="cs-label">Role</span><p>UX Designer &amp; Researcher</p></div>
+      <div><span class="cs-label">Team</span><p>Robiya Sahibnazarova, Annika Kim<br />Mentor: Prof. Sheng-Hung Lee</p></div>
+      <div><span class="cs-label">Methods</span><p>Fieldwork, interviews, iterative prototyping</p></div>
+      <div><span class="cs-label">Tools</span><p>Figma, [add others]</p></div>
+      <div><span class="cs-label">Outcome</span><p><a href="https://doi.org/10.21606/drs.2026.1537" target="_blank">Paper at DRS 2026 ↗</a></p></div>
+    </section>
+
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">01</span>
+        <h2>The <em>problem</em></h2>
+      </div>
+      <div class="cs-body">
+        <div class="cs-stats">
+          <div><span class="cs-stat">27.6%</span><p>of older adults globally experience loneliness</p></div>
+          <div><span class="cs-stat">20%</span><p>of East Boston seniors feel lonely every day</p></div>
+          <div><span class="cs-stat">80%</span><p>of East Boston seniors live alone</p></div>
+        </div>
+        <p>
+          In just two decades, the Seaport went from a working-class industrial waterfront to a
+          technology hub. Young professionals now fill the district, mostly unaware of its history,
+          while the elders who helped build it feel like strangers there. They lose more than their
+          social networks. They lose the places that anchored who they are.
+        </p>
+        <div class="cs-callout">
+          <span class="cs-label">How might we</span>
+          <p>How might we create intergenerational connections through place-based storytelling?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 RESEARCH ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">02</span>
+        <h2><em>Research</em></h2>
+      </div>
+      <div class="cs-body">
+        <h3 class="cs-h3">Site observations</h3>
+        <p>
+          We spent time on the Seaport boardwalk to see how people actually use it.
+          The space had infrastructure for movement, but not for memory.
+        </p>
+        <div class="cs-photos">
+          <img class="cs-photo-wide" src="../assets/time-travelers/site-boardwalk.jpg" alt="The Seaport boardwalk with the Boston skyline" />
+          <img src="../assets/time-travelers/site-1.jpg" alt="Boats and a rowing team in the Seaport harbor" />
+          <img src="../assets/time-travelers/site-2.jpg" alt="The boardwalk near the ICA" />
+          <img src="../assets/time-travelers/site-3.jpg" alt="A plaza along the Seaport waterfront" />
+        </div>
+        <ul class="cs-list">
+          <li>The boardwalk was polished and modern, but built for newcomers and tourists</li>
+          <li>Historical markers covered the district's future, not its past</li>
+          <li>Elders were there, but the space wasn't designed around them</li>
+          <li>Nothing invited people to slow down or connect across generations</li>
+        </ul>
+
+        <h3 class="cs-h3">Interviews</h3>
+        <p>
+          We interviewed four people, including museum professionals, elders, and local residents,
+          to understand how memories shape the way people connect with each other and with a place.
+          Here's some of what they told us:
+        </p>
+
+        <!-- Real quotes from the interviews -->
+        <div class="cs-quotes">
+          <blockquote>
+            <p>“Anthony’s Pier 4 was my favorite restaurant in Seaport back then, but it was shut down, and now there is an apartment complex in its place.”</p>
+            <cite>Anonymous interviewee<span>Western Mass resident for ~50 years</span></cite>
+          </blockquote>
+          <blockquote>
+            <p>“Seaport’s changed a lot over the last 50 years of my time in Boston.”</p>
+            <cite>Diane<span>Boston resident since 1978</span></cite>
+          </blockquote>
+          <blockquote>
+            <p>“Seaport used to be an industrial district with many textile factories and illegal artists lofts.”</p>
+            <cite>Scott<span>Boston resident since 1987</span></cite>
+          </blockquote>
+        </div>
+
+        <p>Three key themes came up:</p>
+        <div class="cs-cards">
+          <div class="cs-card">
+            <span class="cs-label">01</span>
+            <h4>Memory as social currency</h4>
+            <p>Memories of vanished landmarks carried personal meaning and shared history, but they were going unshared. A memory only has value when it circulates.</p>
+          </div>
+          <div class="cs-card">
+            <span class="cs-label">02</span>
+            <h4>Place as memory anchor</h4>
+            <p>Every participant remembered events tied to specific places. In the Seaport, most of those places are gone, and elders felt grateful for the changes but left out of them.</p>
+          </div>
+          <div class="cs-card">
+            <span class="cs-label">03</span>
+            <h4>Technology as barrier and opportunity</h4>
+            <p>App navigation felt foreign to many elders, but telephones and televisions didn't. Familiarity isn't a limitation to work around. It's something to build from.</p>
+          </div>
+        </div>
+        <p class="cs-note">
+          These themes shaped the whole project: a mobile app simple enough for anyone to use, including older adults who are hesitant about technology, and a hands-on 
+          installation that makes sharing memories playful and brings generations together in person.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 03 SKETCHES + WIREFRAMES ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">03</span>
+        <h2>Sketches to <em>wireframes</em></h2>
+      </div>
+      <div class="cs-body">
+        <p>
+          We started with paper sketches of the three core screens: the home screen, a map of pinned
+          memories, and a feed of the latest stories. Then we turned them into wireframes in Figma.
+        </p>
+        <span class="cs-label">Paper sketches</span>
+        <div class="cs-grid cs-grid-3 cs-auto cs-tight">
+          <figure><div class="cs-img"><img src="../assets/time-travelers/sketch-1.jpg" alt="Sketch of the home screen" /></div><figcaption>Home</figcaption></figure>
+          <figure><div class="cs-img"><img src="../assets/time-travelers/sketch-2.jpg" alt="Sketch of the memory map" /></div><figcaption>Memory map</figcaption></figure>
+          <figure><div class="cs-img"><img src="../assets/time-travelers/sketch-3.jpg" alt="Sketch of the latest memories feed" /></div><figcaption>Latest memories</figcaption></figure>
+        </div>
+        <span class="cs-label">Wireframes</span>
+        <div class="cs-grid cs-grid-3 cs-auto cs-tight">
+          <figure><div class="cs-img"><img src="../assets/time-travelers/wireframe-1.jpg" alt="Wireframe of the home screen" /></div><figcaption>Home</figcaption></figure>
+          <figure><div class="cs-img"><img src="../assets/time-travelers/wireframe-2.jpg" alt="Wireframe of the memory map" /></div><figcaption>Memory map</figcaption></figure>
+          <figure><div class="cs-img"><img src="../assets/time-travelers/wireframe-3.jpg" alt="Wireframe of the latest memories feed" /></div><figcaption>Latest memories</figcaption></figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 04 THE APP (dark so the screens pop) ============ -->
+  <section class="cs-section cs-final theme-black">
+    <div class="cs-side">
+      <span class="cs-num">04</span>
+      <h2>The <em>app</em></h2>
+    </div>
+    <div class="cs-body">
+      <p>
+        Users discover stories pinned to real places, take guided walks through the neighborhood's
+        history, and add their own memories with audio and photos. Since our main users are 65 and
+        older, I kept iterating on accessibility: larger text, stronger color contrast, and simple
+        navigation with five clear tabs.
+      </p>
+      <div class="cs-grid cs-grid-4 cs-auto cs-tight">
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-map.jpg" alt="Memory map screen" /></div><figcaption>Memory map</figcaption></figure>
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-tours.jpg" alt="Guided walking tours by decade" /></div><figcaption>Walking tours by decade</figcaption></figure>
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-tour-detail.jpg" alt="Harbor Life Tour details with a timeline" /></div><figcaption>Tour timeline</figcaption></figure>
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-explore.jpg" alt="Explore screen with latest memories" /></div><figcaption>Explore</figcaption></figure>
+      </div>
+      <h3 class="cs-h3">Sharing a memory</h3>
+      <p>
+        A memory prompt invites elders like Barbara to share a story. Others can look through her
+        photos, listen to her audio, and reply, so a single memory turns into a conversation.
+      </p>
+      <div class="cs-grid cs-grid-3 cs-auto cs-tight">
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-prompt.jpg" alt="Memory prompt notification" /></div><figcaption>Memory prompt</figcaption></figure>
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-memory.jpg" alt="Barbara's memory with a photo and audio" /></div><figcaption>Barbara's memory</figcaption></figure>
+        <figure><div class="cs-img"><img src="../assets/time-travelers/screen-comments.jpg" alt="Comments on Barbara's memory" /></div><figcaption>Memory thread</figcaption></figure>
+      </div>
+      <h3 class="cs-h3">Putting it all together</h3>
+      <p>A walkthrough of the full experience, from finding a memory on the map to sharing your own.</p>
+      <div class="cs-video">
+        <video src="../assets/time-travelers/TimeTravelersDemo.mov" autoplay muted loop playsinline controls></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 THE INSTALLATION ============ -->
+  <section class="cs-section theme-cream">
+    <div class="cs-side">
+      <span class="cs-num">05</span>
+      <h2>The <em>installation</em></h2>
+    </div>
+    <div class="cs-body">
+      <p>
+        Nine stations run along the Seaport boardwalk, each with a vintage TV from a different decade
+        playing memories from that era. Visitors record their own stories through connected
+        telephones and listen through headphones, so everyone is both a contributor and an audience.
+        A QR code at each TV links back to the app.
+      </p>
+      <figure class="cs-figure-wide"><img src="../assets/time-travelers/install-sketch-stations.jpg" alt="Sketch of installation stations from the 1950s to the future" /><figcaption>Early sketch: one station per decade, from the 1950s to the future</figcaption></figure>
+      <div class="cs-grid cs-grid-2">
+        <figure><div class="cs-img"><img src="../assets/physical-installation.png" alt="Render of the installation on the boardwalk" /></div><figcaption>Final render on the boardwalk</figcaption></figure>
+        <figure><div class="cs-img cs-contain cs-white"><img src="../assets/time-travelers/50sbooth.png" alt="Close-up of one station with a TV, telephone, headphones, and QR code" /></div><figcaption>A 1950s station up close</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 STORYBOARD ============ -->
+  <section class="cs-section theme-cream cs-border-top">
+    <div class="cs-side">
+      <span class="cs-num">06</span>
+      <h2>How it all <em>connects</em></h2>
+    </div>
+    <div class="cs-body">
+      <p>
+        Storyboard: Barbara records a memory of 1950s parties in the app. Emily, a teen walking around Boston,
+        gets notified and listens. Later, Isabel and her daughter hear watch other people's memories at the boardwalk
+        installation and add their own VHS tape, keeping the cycle going.
+      </p>
+      <img class="cs-storyboard" src="../assets/time-travelers/storyboard.jpg" alt="12-panel storyboard following Barbara, Emily, and Isabel through the app and installation" />
+    </div>
+  </section>
+
+  <!-- ============ 07 OUTCOME ============ -->
+  <section class="cs-section theme-wine">
+    <div class="cs-side">
+      <span class="cs-num">07</span>
+      <h2>Outcome &amp; <em>reflection</em></h2>
+    </div>
+    <div class="cs-body">
+      <p class="cs-lead">
+        My partner and I turned this project into a research paper and presented it at the
+        DRS 2026 conference in Edinburgh, Scotland.
+      </p>
+      <div class="cs-cards">
+        <div class="cs-card">
+          <h4>Memory infrastructure</h4>
+          <p>Designing systems that make shared memory socially useful, not just preserved.</p>
+        </div>
+        <div class="cs-card">
+          <h4>Hybrid design</h4>
+          <p>Complete experiences both online and in person. Neither path is treated as better.</p>
+        </div>
+        <div class="cs-card">
+          <h4>Two-way co-creation</h4>
+          <p>Elders bring the memories, younger users bring the tech. Both are needed.</p>
+        </div>
+      </div>
+      <p>
+        Our user testing sample was small, and we still need to solve mobility barriers and content
+        moderation. Next, we'd like to run a six-month pilot with elders, younger users, and
+        co-creation pairs, measure loneliness over time, and expand to neighborhoods like
+        Chinatown and Roxbury.
+      </p>
+      <a class="cs-button" href="https://doi.org/10.21606/drs.2026.1537" target="_blank">Read the paper ↗</a>
+    </div>
+  </section>
+
+  <!-- ============ NEXT PROJECT ============ -->
+  <a class="cs-next theme-black" href="mbta-redesign.html">
+    <span class="cs-label">Next project</span>
+    <span class="cs-next-title">MBTA App <em>Redesign</em> →</span>
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robiya Sahibnazarova · UX/UI Designer</title>
+  <meta name="description" content="Portfolio of Robiya Sahibnazarova, a UX/UI designer and Computer Science and Design student at Northeastern University." />
+
+  <!-- Fonts: a serif for big headings, a clean sans for body, a mono for small Y2K labels -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero theme-wine">
+    <!-- Your pattern sits behind everything. This is your drawing, assets/pattern.jpg. -->
+    <div class="hero-pattern" aria-hidden="true"></div>
+
+    <nav class="nav">
+      <a href="#" class="logo">robiya</a>
+
+      <div class="clocks">
+        <span><span id="clock-boston">--:--</span> boston</span>
+        <span class="clock-dot">✦</span>
+        <span><span id="clock-tashkent">--:--</span> tashkent</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#work">work</a></li>
+        <li><a href="#play">play</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="assets/resume.pdf" target="_blank">resume</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content">
+      <p class="hero-kicker">✦ portfolio ✦ 2026 ✦</p>
+      <h1 class="hero-name">Robiya<br />Sahibnazarova</h1>
+      <p class="hero-tagline">
+        <em>UX/UI designer</em> working where design meets code.
+      </p>
+      <p class="hero-roles">
+        Software Designer @ <a href="https://generatenu.com/" target="_blank">Generate</a><!-- paste Generate's website link here -->
+        <span>/</span> CS & Design @ Northeastern University
+        <span>/</span> Presented @ DRS 2026, Edinburgh, Scotland
+      </p>
+    </div>
+
+    <a href="#work" class="scroll-cue">scroll to see my work </a>
+  </header>
+
+  <main>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section id="work" class="section theme-cream">
+      <div class="section-head">
+        <h2>Selected <em>work</em></h2>
+        <p>Case studies in research, UX, and interaction design.</p>
+      </div>
+
+      <div class="project-list">
+
+        <!-- Copy one <a class="project"> block per project -->
+        <a href="projects/time-travelers.html" class="project featured">
+          <div class="project-thumb"><img src="assets/physical-installation.png" alt="Physical installation for the Time Travelers project"/></div>
+          <div class="project-info">
+            <span class="project-num">No.01 · featured</span>
+            <span class="badge">✦ Presented at DRS 2026 · Edinburgh</span>
+            <h3>Time Travelers</h3>
+            <p class="project-meta">Research paper + Interaction Design · with Annika Kim, mentored by <span style="white-space:nowrap">Prof. Sheng-Hung Lee</span></p>
+            <p class="project-desc">An intergenerational storytelling experience that connects elders (65+) with Boston's changing Seaport through a memory-sharing app and a vintage-inspired physical installation.</p>
+            <ul class="tags"><li>ui/ux</li><li>field research</li><li>accessibility</li><li>figma</li><li>branding</li></ul>
+            <span class="view-more">view project →</span>
+          </div>
+        </a>
+
+        <!-- ===== Published paper tied to Time Travelers ===== -->
+        <div class="publication">
+          <a class="paper-cover" href="https://doi.org/10.21606/drs.2026.1537" target="_blank" aria-label="Read the Time Travelers paper on the DRS Digital Library">
+            <img src="assets/paper-cover.png" alt="First page of the paper Memory infrastructure for longevity, by Robiya Sahibnazarova and Annika Kim" />
+            <span class="paper-hover">read paper ↗</span>
+          </a>
+          <div class="publication-info">
+            <span class="project-num">Publication</span>
+            <h3>Memory infrastructure for longevity</h3>
+            <p class="project-meta">Designing intergenerational connections through place-based storytelling in urban contexts · DRS2026, Edinburgh</p>
+            <p class="project-desc">A qualitative study on loneliness among Boston residents 65 and older, and how service design and local history can bring generations together in public spaces.</p>
+            <a class="view-more" href="https://doi.org/10.21606/drs.2026.1537" target="_blank">read on the DRS Digital Library ↗</a>
+          </div>
+        </div>
+
+        <a href="projects/mbta-redesign.html" class="project">
+          <div class="project-thumb"><img src="assets/mbta-app-pic.png" alt="MBTA App Redesign"/></div>
+          <div class="project-info">
+            <span class="project-num">No.02</span>
+            <h3>MBTA App Redesign</h3>
+            <p class="project-meta">Design Process and Practices · Studio</p>
+            <p class="project-desc">A redesign of Boston's MBTA app with live train tracking, car capacity, temperature ratings, and a women-only car locator, inspired by Tokyo Metro and the London Tube.</p>
+            <ul class="tags"><li>ui/ux</li><li>wireframing</li><li>high-fidelity</li><li>figma</li></ul>
+            <span class="view-more">view project →</span>
+          </div>
+        </a>
+
+        <a href="projects/findaid.html" class="project">
+          <div class="project-thumb"><img src="assets/findaid-pic.png" alt="FindAid logo"/></div>
+          <div class="project-info">
+            <span class="project-num">No.03</span>
+            <h3>FindAid</h3>
+            <p class="project-meta">Hackathon · Team Nova · Tied for 3rd place</p>
+            <p class="project-desc">A web app that helps students find and organize financial aid for college. I designed the logo and prototyped the frontend, and our team, Nova, built it with React, Flask, and the College Scorecard API.</p>
+            <ul class="tags"><li>social impact</li><li>frontend</li><li>branding</li><li>teamwork</li></ul>
+            <span class="view-more">view project →</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ PLAY ============ -->
+    <section id="play" class="section theme-black">
+      <div class="section-head">
+        <h2>Play</h2>
+        <p>Posters, drawings, and visual experiments. <span class="hint">scroll or drag →</span></p>
+      </div>
+
+      <div class="play-strip" id="play-strip">
+        <!-- Replace each .play-item placeholder with <img src="assets/your-poster.jpg" alt="..."> -->
+        <figure class="play-item"><div class="play-img"></div><figcaption>01 · Origami Club poster</figcaption></figure>
+        <figure class="play-item"><div class="play-img"></div><figcaption>02 · Pattern study</figcaption></figure>
+        <figure class="play-item"><div class="play-img"></div><figcaption>03 · Origami Club poster</figcaption></figure>
+        <figure class="play-item"><div class="play-img"></div><figcaption>04 · Sketch</figcaption></figure>
+        <figure class="play-item"><div class="play-img"></div><figcaption>05 · Experiment</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section about theme-wine">
+      <div class="about-photo"><img src="assets/portfolio.jpeg" alt="Robiya Sahibnazarova" /></div>
+      <div class="about-text">
+        <h2>Hi, I'm <em>Robiya</em></h2>
+        <p>
+          I'm a third-year student from Nashville, TN, at Northeastern University majoring in Computer Science and Design,
+          passionate about combining technology and visual creativity. My background spans both art and design work,
+          designing and prototyping apps in Figma and building foundational UX/UI experience.
+        </p>
+        <p>
+          Outside of work, I love drawing, painting, traveling, and learning new languages and cultures,
+          including diving deeper into my Uzbek heritage.
+        </p>
+        <p class="looking">✦ Looking for UX/UI design co-ops and internships for Spring and Summer 2027.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer theme-black">
+    <h2 class="footer-big">Let's <em>connect</em></h2>
+    <div class="footer-links">
+      <a href="mailto:sahibnazarova.r@northeastern.edu">sahibnazarova.r@northeastern.edu</a>
+      <a href="https://www.linkedin.com/in/robiya-sahibnazarova-825069337" target="_blank">linkedin</a>
+      <a href="https://www.instagram.com/hakimova.art/" target="_blank">art instagram</a>
+      <a href="assets/resume.pdf" target="_blank">resume</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Robiya Sahibnazarova</span>
+      <span>Boston, MA ✦ Tashkent, UZ</span>
+      <a href="#">back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
