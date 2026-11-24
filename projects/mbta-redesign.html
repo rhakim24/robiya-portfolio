@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MBTA App Redesign · Robiya Sahibnazarova</title>
+  <meta name="description" content="A redesign of Boston's MBTA app with live journey info, car occupancy, temperature-regulated cars, and women-only car options." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body>
+
+  <!-- ============ TOP ============ -->
+  <header class="cs-hero theme-wine">
+    <nav class="nav">
+      <a href="../index.html" class="logo">robiya</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#work">← all work</a></li>
+        <li><a href="../index.html#about">about</a></li>
+        <li><a href="../assets/resume.pdf" target="_blank">resume</a></li>
+      </ul>
+    </nav>
+
+    <div class="cs-hero-content">
+      <h1 class="cs-title">MBTA App <em>Redesign</em></h1>
+      <p class="cs-subtitle">
+        A redesign of Boston's transit app that tells commuters what's actually happening:
+        live delays, how full each car is, which cars run warmer or cooler, and where the women-only cars are.
+      </p>
+    </div>
+
+    <div class="cs-cover cs-cover-phones">
+      <img src="../assets/mbta/screen-home.png" alt="Home screen with a Where to? search bar over the MBTA map" />
+      <img src="../assets/mbta/screen-journey.png" alt="Journey screen with best route, ride time, and live delay" />
+      <img src="../assets/mbta/screen-amenities.png" alt="Train amenities screen showing women-only and temperature-regulated cars" />
+      <img src="../assets/mbta/screen-mapstyle.png" alt="Choose map style panel with classic, satellite, and night options" />
+      <img src="../assets/mbta/screen-menu.png" alt="Side menu with line status, recents, saved routes, fare info, accessibility, and commuter rail" />
+    </div>
+  </header>
+
+  <main class="theme-cream">
+
+    <!-- ============ QUICK FACTS ============ -->
+    <section class="cs-facts">
+      <div><span class="cs-label">Role</span><p>UX/UI Designer</p></div>
+      <div><span class="cs-label">Course</span><p>ARTG 1270: Design Process & Practices</p></div>
+      <div><span class="cs-label">Timeline</span><p>Fall 2025</p></div>
+      <div><span class="cs-label">Tools</span><p>Figma</p></div>
+      <div><span class="cs-label">Focus</span><p>Real-time info, convenience, safety</p></div>
+    </section>
+
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">01</span>
+        <h2>The <em>problem</em></h2>
+      </div>
+      <div class="cs-body">
+        <p class="cs-lead">
+          Riding the T means a lot of guessing: when the train will come, which line it is, and how packed it'll be.
+        </p>
+        <p>
+          I started by writing down everything that frustrates riders, including me, on the MBTA.
+          Trains get delayed by weather and traffic. The Green Line splits into four branches (B, C, D, E),
+          and some trains don't even say which one they are. You never know which car will be less crowded
+          until it pulls in, and the E line is always packed. Some trains have no signs or announcements for
+          the next stop, and elevators for disabled riders are rare.
+        </p>
+        <figure class="cs-figure-wide cs-notes">
+          <img src="../assets/mbta/observation-notes.jpg" alt="Handwritten notes listing challenges on the MBTA, next to the current MBTA map" />
+          <figcaption>My first round of notes on what makes the MBTA hard to use</figcaption>
+        </figure>
+        <div class="cs-callout">
+          <span class="cs-label">How might we</span>
+          <p>How might we give commuters real-time information they can trust, so their ride feels predictable, comfortable, and safe?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 RESEARCH ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">02</span>
+        <h2><em>Research</em></h2>
+      </div>
+      <div class="cs-body">
+
+        <h3 class="cs-h3">Who I designed for</h3>
+        <div class="cs-persona">
+          <div class="cs-persona-top">
+            <div>
+              <span class="cs-label">User persona</span>
+              <h4>Sophia C., 32</h4>
+              <p>Marketing manager who lives in Needham and works downtown. She takes the Commuter Rail and Green Line five days a week and has a 9 AM meeting every Monday and Wednesday.</p>
+            </div>
+            <div class="cs-persona-meter">
+              <span class="cs-label">Frustration</span>
+              <span class="cs-persona-score">8/10</span>
+            </div>
+          </div>
+          <div class="cs-persona-cols">
+            <div>
+              <span class="cs-label">Goals</span>
+              <ul>
+                <li>Get to work on time and unstressed</li>
+                <li>Avoid overcrowded cars</li>
+                <li>Find a car that isn't freezing or boiling</li>
+                <li>Feel safe on her commute</li>
+              </ul>
+            </div>
+            <div>
+              <span class="cs-label">Pain points</span>
+              <ul>
+                <li>Needham station has no real-time updates</li>
+                <li>No idea which Green Line train will be less packed</li>
+                <li>Can't tell a car's temperature until she's on it</li>
+                <li>Late to meetings from last-minute track switches</li>
+              </ul>
+            </div>
+          </div>
+          <blockquote class="cs-persona-quote">“I just want to know: Is my train coming? How full will it be? Which car won't be freezing or boiling?”</blockquote>
+        </div>
+
+        <h3 class="cs-h3">Ideas from transit around the world</h3>
+        <p>
+          A lot of the problems I listed are already solved somewhere else, so I looked at metro systems
+          I've used or read about for ideas.
+        </p>
+        <div class="cs-cards">
+          <div class="cs-card">
+            <span class="cs-label">Japan</span>
+            <h4>Women-only cars</h4>
+            <p>Dedicated cars that help women feel safer, especially when traveling alone.</p>
+          </div>
+          <div class="cs-card">
+            <span class="cs-label">South Korea</span>
+            <h4>Temperature-regulated cars</h4>
+            <p>Some cars run cooler and some warmer, so riders can pick what's comfortable.</p>
+          </div>
+          <div class="cs-card">
+            <span class="cs-label">Uzbekistan</span>
+            <h4>Clear direction signs</h4>
+            <p>Signs on the walls show the next stops for inbound and outbound trains.</p>
+          </div>
+        </div>
+
+        <h3 class="cs-h3">Learning from other metro apps</h3>
+        <p>
+          I also studied three transit apps. I liked Tokyo Metro's Google Maps-style home page with a simple
+          “Where to?” search bar, Tube Map's side panel with line status, favorites, and different map styles,
+          and how Mapway works in other cities like Boston. The downside of Mapway was constant ads and paid features.
+        </p>
+        <figure class="cs-figure-wide">
+          <img src="../assets/mbta/app-research.jpg" alt="Screenshots of the Tokyo Metro, Tube Map, and Mapway apps with notes" />
+          <figcaption>App layout exploration: Tokyo Metro, Tube Map, and Mapway</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 03 IDEATION ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">03</span>
+        <h2>Planning the <em>app</em></h2>
+      </div>
+      <div class="cs-body">
+        <p>
+          I listed the essential pages and features: a home screen with a destination search, a side panel
+          for live updates, saved routes, and commuter rail, a settings page, and a train amenities section
+          for women-only cars, temperature preferences, and wheelchair accessibility.
+        </p>
+        <div class="cs-grid cs-grid-2 cs-auto">
+          <figure><div class="cs-img"><img src="../assets/mbta/app-notes.jpg" alt="Handwritten list of essential pages and features" /></div><figcaption>Essential pages and features</figcaption></figure>
+          <figure><div class="cs-img"><img src="../assets/mbta/user-flow.jpg" alt="User flow from opening the app to choosing a train car" /></div><figcaption>User flow: Sophia's Monday morning commute</figcaption></figure>
+        </div>
+
+        <h3 class="cs-h3">Storyboard</h3>
+        <p>
+          The storyboard follows Sophia as she checks live updates in the app, sees alternate routes on
+          station displays, picks a women-only car with weaker air conditioning, and arrives stress-free.
+        </p>
+        <img class="cs-storyboard" src="../assets/mbta/storyboard.jpg" alt="Six-panel storyboard of Sophia using the redesigned MBTA app and station displays" />
+      </div>
+    </section>
+
+    <!-- ============ 04 VERSION 1 ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">04</span>
+        <h2>Version <em>one</em></h2>
+      </div>
+      <div class="cs-body">
+        <p>
+          My first prototype was a gray wireframe flow in Figma. It had the welcome screen, the map with a
+          search bar, the side panel, settings, map styles, a sample journey, and a first pass at the
+          train amenities page.
+        </p>
+        <figure class="cs-figure-wide">
+          <img src="../assets/mbta/v1-prototype.jpg" alt="Version 1 Figma prototype frames connected by flows" />
+          <figcaption>Version 1 prototype flow in Figma</figcaption>
+        </figure>
+        <span class="cs-label">What I wanted to fix next</span>
+        <ul class="cs-list">
+          <li>Make a working sample journey from start to finish</li>
+          <li>Link the train amenities page to a car map showing women-only and temperature-regulated cars</li>
+          <li>Add a live occupancy screen for each car</li>
+          <li>Add a real color palette and font style</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 05 FINAL DESIGN ============ -->
+  <section class="cs-section cs-final theme-black">
+    <div class="cs-side">
+      <span class="cs-num">05</span>
+      <h2>The final <em>design</em></h2>
+    </div>
+    <div class="cs-body">
+      <p>
+        The final app gives a navy and cream look to every flow from version one. Search for a destination
+        and you get the best route, ride time, and live delays. From the journey screen, you can open the
+        train amenities and see which cars are women-only, which run warmer or cooler, and how crowded each
+        car is right now.
+      </p>
+      <figure class="cs-figure-wide">
+        <img src="../assets/mbta/train-amenities.jpg" alt="Four screens: train amenity help popups, the amenities car map, and the live occupancy tracker" />
+        <figcaption>Train amenities with help popups, and the live occupancy tracker</figcaption>
+      </figure>
+
+      <h3 class="cs-h3">From version one to final</h3>
+      <p>Here are both prototypes side by side.</p>
+      <div class="cs-video-pair">
+        <figure>
+          <video src="../assets/mbta/v1-demo.mp4" autoplay muted loop playsinline controls></video>
+          <figcaption>Version 1</figcaption>
+        </figure>
+        <figure>
+          <video src="../assets/mbta/final-demo.mp4" autoplay muted loop playsinline controls></video>
+          <figcaption>Final version</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 REFLECTION ============ -->
+  <section class="cs-section theme-wine">
+    <div class="cs-side">
+      <span class="cs-num">06</span>
+      <h2>What's <em>next</em></h2>
+    </div>
+    <div class="cs-body">
+      <p class="cs-lead">
+        The app is one piece of a bigger system that could make public transit feel trustworthy again.
+      </p>
+      <p>
+        Beyond the app, I proposed digital displays at stations with live train status and car capacity,
+        direction signs for inbound and outbound trains, and platform screen doors for safety. Further out,
+        predictive maintenance could cut down on delays before they happen.
+      </p>
+      <p></p>
+    </div>
+  </section>
+
+  <!-- ============ NEXT PROJECT ============ -->
+  <a class="cs-next theme-black" href="findaid.html">
+    <span class="cs-label">Next project</span>
+    <span class="cs-next-title"><em>FindAid</em> →</span>
+  </a>
+
+</body>
+</html>

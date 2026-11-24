@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FindAid · Robiya Sahibnazarova</title>
+  <meta name="description" content="FindAid: a hackathon web app that helps students, especially from low-income backgrounds, find and organize financial aid. 3rd place at STHacks." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../case-study.css" />
+</head>
+<body>
+
+  <!-- ============ TOP ============ -->
+  <header class="cs-hero theme-wine">
+    <nav class="nav">
+      <a href="../index.html" class="logo">robiya</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#work">← all work</a></li>
+        <li><a href="../index.html#about">about</a></li>
+        <li><a href="../assets/resume.pdf" target="_blank">resume</a></li>
+      </ul>
+    </nav>
+
+    <div class="cs-hero-content">
+      <span class="badge">✦ 3rd place · STHacks</span>
+      <h1 class="cs-title"><em>FindAid</em></h1>
+      <p class="cs-subtitle">
+        A web app built in one hackathon weekend that helps students, especially those from
+        low-income backgrounds, find colleges they can afford and keep track of their options.
+      </p>
+    </div>
+
+    <div class="cs-cover cs-cover-split">
+      <img class="cs-cover-logo" src="../assets/findaid/logo.jpg" alt="FindAid logo: a magnifying glass over a graduation cap" />
+      <img class="cs-cover-shot" src="../assets/findaid/demo.jpg" alt="FindAid showing college cards with acceptance rate, cost after aid, and median debt" />
+    </div>
+  </header>
+
+  <main class="theme-cream">
+
+    <!-- ============ QUICK FACTS ============ -->
+    <section class="cs-facts">
+      <div><span class="cs-label">My role</span><p>Branding &amp; front-end design</p></div>
+      <div><span class="cs-label">Team</span><p>Team Nova: Krisha, Sarah Jane, Saachi, & Robiya</p></div>
+      <div><span class="cs-label">Timeline</span><p>One weekend, spring 2025</p></div>
+      <div><span class="cs-label">Tools</span><p>Canva, VSCode, React, Flask, Postman</p></div>
+      <div><span class="cs-label">Outcome</span><p><a href="https://devpost.com/software/findaid" target="_blank">3rd place on Devpost ↗</a></p></div>
+    </section>
+
+    <!-- ============ 01 PROBLEM ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">01</span>
+        <h2>Why it <em>matters</em></h2>
+      </div>
+      <div class="cs-body">
+        <div class="cs-stats">
+          <div><span class="cs-stat">58%</span><p>of students say financial aid info is hard to find</p></div>
+          <div><span class="cs-stat">1 in 3</span><p>students skip applying to schools they assume they can't afford</p></div>
+          <div><span class="cs-stat">40%</span><p>of Pell Grant-eligible students never enroll in college</p></div>
+        </div>
+        <p>
+          The hackathon challenge was to build something for social impact. Our team kept coming back to
+          college costs. Tuition has gone up 169% since 1980, 43.5 million Americans have student loan debt,
+          and the average borrower owes over $37,000. A lot of students rule out schools before they ever see
+          what they'd actually pay after aid.
+        </p>
+        <div class="cs-callout">
+          <span class="cs-label">How might we</span>
+          <p>How might we make financial aid information simple enough that cost doesn't stop students from applying?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 SOLUTION ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">02</span>
+        <h2>The <em>solution</em></h2>
+      </div>
+      <div class="cs-body">
+        <p class="cs-lead">
+          FindAid shows students the real cost of college, one school at a time.
+        </p>
+        <p>
+          Each college card shows the location, type, and length of the program, plus the numbers that matter
+          most: acceptance rate, average cost after aid, the share of students receiving federal loans and Pell
+          Grants, and median debt after graduation. Students can save schools they like or skip the ones they
+          don't, and their picks show up in a saved list.
+        </p>
+        <figure class="cs-figure-wide">
+          <img src="../assets/findaid/demo.jpg" alt="FindAid interface with college cards and a saved universities list" />
+          <figcaption>College cards with Save and Skip, and the saved universities list</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 03 MY ROLE ============ -->
+    <section class="cs-section">
+      <div class="cs-side">
+        <span class="cs-num">03</span>
+        <h2>My <em>role</em></h2>
+      </div>
+      <div class="cs-body">
+        <p>
+          It was my first hackathon. I designed the FindAid logo in Canva, a magnifying glass over a
+          graduation cap, to show the idea of searching for an education. I also made the site's favicon
+          and got it live, and I prototyped the front end,
+          and then our team built the site with React and Python Flask, pulling real data from the
+          College Scorecard API.
+        </p>
+        <div class="cs-cards">
+          <div class="cs-card"><span class="cs-label">Front end</span><h4>React</h4><p>HTML, CSS, and JavaScript for the interface.</p></div>
+          <div class="cs-card"><span class="cs-label">Back end</span><h4>Python Flask</h4><p>Handled requests and passed data to the front end. Tested with Postman.</p></div>
+          <div class="cs-card"><span class="cs-label">Data</span><h4>College Scorecard API</h4><p>Public U.S. data on cost, aid, and outcomes for every college.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 04 DEMO ============ -->
+  <section class="cs-section cs-final theme-black">
+    <div class="cs-side">
+      <span class="cs-num">04</span>
+      <h2>The <em>demo</em></h2>
+    </div>
+    <div class="cs-body">
+      <p>Here's our demo from Devpost.</p>
+      <div class="cs-embed">
+        <iframe src="https://player.vimeo.com/video/1070911512?byline=0&portrait=0&title=0" title="FindAid demo video" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 OUTCOME ============ -->
+  <section class="cs-section theme-wine">
+    <div class="cs-side">
+      <span class="cs-num">05</span>
+      <h2>Outcome &amp; <em>reflection</em></h2>
+    </div>
+    <div class="cs-body">
+      <p class="cs-lead">
+        Team Nova tied for 3rd place at STHacks.
+      </p>
+      <figure class="cs-team">
+        <img src="../assets/findaid/team.jpg" alt="Team Nova holding a laptop showing the FindAid logo" />
+        <figcaption>Team Nova with FindAid</figcaption>
+      </figure>
+      <p>
+        FindAid supports the UN's Sustainable Development Goal 4, Quality Education, by working toward equal
+        access to affordable education for everyone.
+      </p>
+      <p>My first hackathon was exhilarating, challenging, and so much fun. Building from scratch as a
+        team, from brainstorming late into the night to watching our project actually work, brought us
+        closer and made placing 3rd feel even better.</p>
+      <a class="cs-button" href="https://devpost.com/software/findaid" target="_blank">See it on Devpost ↗</a>
+    </div>
+  </section>
+
+  <!-- ============ NEXT PROJECT ============ -->
+  <a class="cs-next theme-black" href="time-travelers.html">
+    <span class="cs-label">Next project</span>
+    <span class="cs-next-title">Time <em>Travelers</em> →</span>
+  </a>
+
+</body>
+</html>

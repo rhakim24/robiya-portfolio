@@ -1,6 +1,6 @@
 /* =========================================================
    CASE STUDY PAGES
-   Uses the colors, fonts, and themes from style.css.
+   colors, fonts, and themes from style.css.
    ========================================================= */
 
 /* ---------- top ---------- */
@@ -318,3 +318,85 @@
   display: block;
   background: var(--bg-raised);
 }
+
+/* ---------- cover with a row of phone screens ---------- */
+.cs-cover-phones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2%;
+  padding: 40px 4% 0;
+  aspect-ratio: auto;
+}
+.cs-cover-phones img { width: 17%; height: auto; object-fit: contain; display: block; }
+
+/* ---------- persona card ---------- */
+.cs-persona {
+  margin: 16px 0 24px;
+  padding: 32px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+.cs-persona h4 { font-family: var(--serif); font-weight: 400; font-size: 34px; margin: 4px 0 8px; }
+.cs-persona-top { display: flex; justify-content: space-between; gap: 32px; }
+.cs-persona-top p { max-width: 560px; }
+.cs-persona-meter { text-align: right; flex-shrink: 0; }
+.cs-persona-score { display: block; font-family: var(--display); font-size: 56px; line-height: 1; color: var(--wine); }
+.cs-persona-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 28px; }
+.cs-persona-cols ul { list-style: none; margin-top: 8px; }
+.cs-persona-cols li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 15px; }
+.cs-persona-quote {
+  margin-top: 28px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+/* ---------- handwritten notes image ---------- */
+.cs-notes { max-width: 560px; }
+
+/* ---------- two demo videos side by side ---------- */
+.cs-video-pair {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 24px;
+}
+.cs-video-pair figure { width: 100%; max-width: 280px; }
+.cs-video-pair video { width: 100%; display: block; border-radius: 24px; background: var(--bg-raised); }
+.cs-video-pair figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 10px; text-align: center; }
+
+@media (max-width: 860px) {
+  .cs-persona-top, .cs-persona-cols { grid-template-columns: 1fr; flex-direction: column; }
+  .cs-persona-meter { text-align: left; }
+  .cs-video-pair { gap: 16px; }
+}
+
+/* ---------- FindAid cover: logo + screenshot ---------- */
+.cs-cover-split {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 24px;
+  align-items: center;
+  padding: 32px;
+  aspect-ratio: auto;
+}
+.cs-cover-split img { width: 100%; height: auto; display: block; border-radius: 12px; }
+.cs-cover-logo { border-radius: 50% !important; }
+
+/* ---------- embedded video (Vimeo / YouTube) ---------- */
+.cs-embed { position: relative; aspect-ratio: 16 / 9; margin-top: 24px; border-radius: 16px; overflow: hidden; background: var(--bg-raised); }
+.cs-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+@media (max-width: 860px) {
+  .cs-cover-split { grid-template-columns: 1fr; }
+  .cs-cover-logo { max-width: 200px; margin: 0 auto; }
+}
+
+/* ---------- team photo ---------- */
+.cs-team { max-width: 420px; margin: 8px 0 32px; }
+.cs-team img { width: 100%; display: block; border-radius: 16px; }
+.cs-team figcaption { font-family: var(--mono); font-size: 12px; color: var(--muted); margin-top: 10px; }

@@ -1,6 +1,6 @@
 /* =========================================================
-   COLORS + FONTS
-   The whole palette lives here. Change a hex code and it updates everywhere.
+   COLORS & FONTS
+   website color palette
    ========================================================= */
 :root {
   --wine: #5c1518;        /* deep wine red */
@@ -17,9 +17,7 @@
 }
 
 /* =========================================================
-   SECTION THEMES
-   Each section gets one solid color. Add theme-wine, theme-cream,
-   or theme-black to any section in index.html to switch it.
+   SECTION COLOR THEMES
    ========================================================= */
 .theme-wine {
   --bg: var(--wine);
@@ -77,12 +75,12 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
-/* Your pahtagul drawing, laid over the wine red */
+/* pahtagul pattern */
 .hero-pattern {
   position: absolute;
   inset: 0;
   background: url("assets/pattern.jpg") center / cover no-repeat;
-  mix-blend-mode: multiply;    /* black ink darkens the red, white paper disappears */
+  mix-blend-mode: multiply;
   opacity: 0.4;
 }
 
@@ -216,7 +214,7 @@ ul { list-style: none; }
 .project-info { display: flex; flex-direction: column; justify-content: center; }
 .project-num { font-family: var(--mono); font-size: 12px; color: var(--accent); }
 
-/* Featured project: solid wine card, like a color block in your reference */
+/* featured project is highlighted with wine red bg */
 .project.featured {
   --bg-raised: var(--wine);
   --text: var(--cream);
@@ -259,7 +257,7 @@ ul { list-style: none; }
 .view-more { font-family: var(--mono); font-size: 13px; color: var(--accent); }
 
 /* =========================================================
-   PUBLICATION (clickable paper cover)
+   DRS PAPER (clickable paper cover)
    ========================================================= */
 .publication {
   display: grid;
@@ -274,7 +272,7 @@ ul { list-style: none; }
 .paper-cover {
   position: relative;
   display: block;
-  aspect-ratio: 210 / 297;          /* A4 page shape */
+  aspect-ratio: 210 / 297;          /* makes A4 page shape */
   border-radius: 6px;
   overflow: hidden;
   background: #fff;
@@ -418,8 +416,8 @@ ul { list-style: none; }
 }
 
 /* =========================================================
-   TYPE: big serif headings + italic accents (like your reference)
-   Wrap any word in <em> inside these headings to make it italic serif.
+   TYPE: big serif headings + italic accents
+   wrapping with <em> inside these headings makes it italic serif.
    ========================================================= */
 .hero-name,
 .hero-tagline,
@@ -433,7 +431,7 @@ ul { list-style: none; }
   letter-spacing: 0;
 }
 
-.hero-name { font-size: clamp(72px, 13.5vw, 210px); line-height: 0.86; letter-spacing: -0.01em; }
+.hero-name { font-size: clamp(72px, 13.5vw, 210px); line-height: 0.95; letter-spacing: -0.01em; }
 .hero-tagline { font-size: clamp(24px, 2.8vw, 38px); line-height: 1.15; max-width: 960px; }
 .section-head h2 { font-size: clamp(44px, 6vw, 84px); line-height: 1; }
 .project-info h3 { font-size: clamp(34px, 3.6vw, 52px); line-height: 1; }
@@ -441,7 +439,7 @@ ul { list-style: none; }
 .about-text h2 { font-size: clamp(48px, 6vw, 84px); line-height: 1; }
 .footer-big { font-size: clamp(72px, 13vw, 200px); line-height: 0.9; }
 
-/* the italic accent words */
+/* italic accent words */
 .hero-tagline em,
 .section-head h2 em,
 .about-text h2 em,
